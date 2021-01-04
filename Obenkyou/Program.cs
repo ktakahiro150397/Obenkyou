@@ -7,6 +7,7 @@ namespace Obenkyou
         static void Main(string[] args)
         {
             Console.WriteLine("obenkyou");
+            Console.WriteLine("Git");
         }
     }
 }
