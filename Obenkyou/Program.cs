@@ -20,7 +20,20 @@ namespace Obenkyou
             result = TestFunction3(10, 20);
             Console.WriteLine("TestFunction3から返された値は{0}です！", result);
 
-            //Mainメソッドの終了はプログラムの終了と同じ
+
+            //<型名> <変数名>で自由に変数を定義できる
+            int intvar1 = 15;
+            int intvar2 = 30;
+            string strvar = "文字列変数";
+
+            //【メソッドには変数を渡すこともできる】
+            TestFunction2(strvar);
+
+            int resultarg = 0;
+            resultarg = TestFunction3(intvar1, intvar2);
+            Console.WriteLine("TestFunction3から返された値は{0}です！", resultarg);
+
+            //Mainメソッドの終了はコンソールプログラムの終了と同じ
             Console.WriteLine("プログラムが終了");
 
         }
@@ -33,6 +46,8 @@ namespace Obenkyou
         // <仮引数>     ：存在しない場合は()
         //              ：存在する場合、型と名前を指定する
         //              ：カンマで区切り、複数個指定できる
+
+        //Programクラス内に定義する場合、以下のように書ける
 
         /// <summary>
         /// テスト用関数1:引数なし
@@ -64,7 +79,7 @@ namespace Obenkyou
             //受け取った値で計算を行う
             var result = x + y;
 
-            //計算結果を呼び出し元へ返す
+            //計算結果を呼び出し元へ返す！
             return result;
         }
     }
