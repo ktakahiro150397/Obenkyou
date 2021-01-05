@@ -6,9 +6,23 @@ namespace Obenkyou
     {
         static void Main(string[] args)
         {
+
+            //「//」を文頭に置くとその行はコメントになる
+            //コメントはコードとして扱われないため、メモに使用できる
+
+            //Console.WriteLine(<文字列>);で、文字列を表示できる
+            //C#では、文字列を「"」でかこって表現する
+
+            //識別子には大文字・小文字の区別が存在する
+
+            //console.writeline("obenkyou");　←エラー(小文字になっているため)
+            //Console.WriteLine(obenkyou);　←エラー(""で囲われていないため、識別子として扱われる)
+            Console.WriteLine("obenkyou");
+
             //コンソールプログラムではMainメソッドがエントリポイント(プログラム起動時に呼び出されるメソッド)となる
             Console.WriteLine("ここからプログラムを開始する");
 
+            //【メソッド呼び出し】
             //①下で定義しているメソッドを呼び出す
             TestFunction();
 
@@ -20,13 +34,13 @@ namespace Obenkyou
             result = TestFunction3(10, 20);
             Console.WriteLine("TestFunction3から返された値は{0}です！", result);
 
-
+            //【変数定義】
             //<型名> <変数名>で自由に変数を定義できる
             int intvar1 = 15;
             int intvar2 = 30;
             string strvar = "文字列変数";
 
-            //【メソッドには変数を渡すこともできる】
+            //メソッドには変数を渡すこともできる
             TestFunction2(strvar);
 
             int resultarg = 0;
@@ -47,7 +61,7 @@ namespace Obenkyou
         //              ：存在する場合、型と名前を指定する
         //              ：カンマで区切り、複数個指定できる
 
-        //Programクラス内に定義する場合、以下のように書ける
+        //Programクラス内に定義する場合、以下のように書く
 
         /// <summary>
         /// テスト用関数1:引数なし
